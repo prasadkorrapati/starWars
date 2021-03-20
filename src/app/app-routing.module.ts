@@ -8,6 +8,8 @@ const routes: Routes = [
     path: '',
     component: HeaderComponent,
     children: [
+      { path: '', redirectTo: 'startWars', pathMatch: 'full'},
+      { path: 'starWars', component: StarWarComponent},
       {
         path: 'films',
         loadChildren: () => import('./films/films.module').then(m => m.FilmsModule)
@@ -20,10 +22,8 @@ const routes: Routes = [
         path: 'planets',
         loadChildren: () => import('./planets/planets.module').then(m => m.PlanetsModule)
       },
-      {
-        path: 'starWars',
-        component: StarWarComponent
-      }
+      { path: '**', component: StarWarComponent }
+      
     ]
   }
 ];
