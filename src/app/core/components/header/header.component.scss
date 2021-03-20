@@ -1,0 +1,51 @@
+.star-war-logo {
+    width: 60px;
+    height: 30px;
+}
+
+.navbar-expand-lg .navbar-nav  {
+    .nav-item {
+        padding: 0 20px;
+
+        &.active .nav-link { 
+            border-bottom: 1px solid black;
+            color: black;
+        }
+        .nav-link {
+            padding: 0;
+            color: black;
+            
+        }
+    }
+
+}
+
+.row {
+    height: 100%;
+}
+.container {
+    &.main-content {
+        //47px is the nav bar height;
+        height: calc(100vh - 47px);
+    }
+}
+
+@media (max-width: 992px) {
+    .nav-item {
+        padding: 5px 0 !important;
+       
+        .nav-link {
+            text-align: center;
+        }
+    }
+
+    .container {
+        &.main-content {
+            // 193 = 56px(navbar) + 137px(nav bar menu in mobile) 
+            height: calc(100vh - 193px);
+        }
+        &.collapsed-header {
+            height: calc(100vh - 56px);
+        }
+    }
+}

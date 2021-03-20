@@ -1,0 +1,29 @@
+<nav class="navbar navbar-default navbar-expand-lg  navbar-light bg-light">
+    <div class="container-fluid container">
+        <div class="navbar-header">
+            <img class="star-war-logo" src="./../../assets/images/star-wars-logo.png">
+          </div>
+          <button type="button" class="navbar-toggler" data-toggle="collapse" (click)="toggle()" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <ul class="navbar-collapse navbar-nav mr-auto" [ngClass]="{'collapse' : collapse}" id="navbarCollapse">
+            <li class="nav-item " routerLinkActive="active">
+                <a class="nav-link font-weight-normal" routerLink='/starWars'>Star Wars</a>
+            </li>
+            <li class="nav-item " routerLinkActive="active">
+                <a class="nav-link font-weight-normal" routerLink='/films'>Films</a>
+            </li>
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link font-weight-normal"routerLink='/characters'>Characters</a>
+            </li>
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link font-weight-normal" routerLink='/planets'>Planets
+                </a>
+            </li>
+        </ul>
+    </div>
+    </nav>
+
+<div class='container main-content' [ngClass]="{'collapsed-header' : collapse}">
+    <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,20 @@
+<div class="page-header">
+    <h4 class="text-center">Characters</h4>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4 mt-4" *ngFor="let character of characters;">
+            <app-entity-card [title]="character.name" [entityType]="entityType" [entity]="character"  [route]="'/characters/details'">
+                <ng-container 
+                    [ngTemplateOutlet] = "characterCard"
+                     [ngTemplateOutletContext]="{$implicit: character}"></ng-container>
+                <ng-template #characterCard>
+                    <ul class="card-text list-unstyled">
+                        <li> gender: <span>{{character.gender}}</span></li>
+                        <li> Birth Year: <span>{{character.birth_year}}</span></li>
+                    </ul>
+                </ng-template>
+            </app-entity-card>
+        </div>
+    </div>
+</div>

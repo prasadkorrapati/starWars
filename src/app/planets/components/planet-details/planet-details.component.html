@@ -1,0 +1,50 @@
+<div class="page-header">
+    <h4 class="text-center page-details-label"><small>Planet Details</small></h4>
+    <hr>
+    <h4 class="text-center mb-3">{{planetDetails.name}}</h4>
+</div>
+
+<div class="row">
+    <div class="col-sm-6 small">
+        <h6>Details:</h6>
+        <ul class="card-text list-unstyled">   
+            <li>
+                <strong>Type: </strong>
+                <span>{{planetDetails.terrain}}</span>
+            </li>
+            <li>
+                <strong>Climate: </strong>
+                <span>{{planetDetails.climate}}</span>
+            </li>
+            <li>
+                <strong>Population: </strong>
+                <span>{{planetDetails.population}}</span></li>
+            <li>
+                <strong>Rotation Period: </strong>
+                <span>{{planetDetails.rotation_period}}</span>
+            </li>
+            <li>
+                <strong>Period: </strong>
+                <span>{{planetDetails.orbital_period}}</span>
+            </li>
+        </ul>
+        
+    </div>
+    <div class="col-sm-6"  (resized)="onResized($event)">
+        <img #image class="card-img-top" src='assets/images/{{entityType}}/{{entityId}}.jpg' alt="Card image"
+            onError="this.src='assets/images/star-wars.svg'">
+    </div>
+</div>
+<div class="categories">
+    <h6>Films:</h6>
+    <ng-container *ngFor="let film of planetDetails.films">
+        <app-entity-redirect [url]="film" [urlToRedirect] ="'films/details/'"></app-entity-redirect>
+    </ng-container>
+</div>
+<div class="categories">
+    <h6>Residents:</h6>
+    <span *ngIf ="!planetDetails.residents.length"> No Residents on this planet</span>
+    <ng-container *ngFor="let resident of planetDetails.residents">
+        <app-entity-redirect [url]="resident"  [urlToRedirect] ="''"></app-entity-redirect>
+    </ng-container>
+</div>

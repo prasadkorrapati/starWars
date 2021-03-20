@@ -1,0 +1,14 @@
+h6 {
+    margin-top: 15px;
+}
+
+.card-img-top {
+    width: 350px;
+    max-height: 250px;
+}
+
+@media (max-width: 992px) {
+    .card-img-top {
+        margin-top: 15px;
+    }
+}

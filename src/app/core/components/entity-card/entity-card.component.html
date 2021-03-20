@@ -1,0 +1,12 @@
+<div class="card thumbnail" (resized)="onResized($event)">
+    <a href="#" [routerLink]="[route, getId(entity)]" class="btn">
+        <img #image class="card-img-top img-responsive" src='assets/images/{{entityType}}/{{getId(entity)}}.jpg' alt="Card image"
+            onError="this.src='assets/images/star-wars.svg'">
+        <div class="card-body">
+            <h6 class="card-title">{{title}}</h6>
+            <ng-content></ng-content>
+            <br>
+            <h6>Click for more information...</h6>
+        </div>
+    </a>
+</div>

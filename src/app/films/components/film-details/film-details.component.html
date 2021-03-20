@@ -1,0 +1,40 @@
+<div class="page-header">
+    <h4 class="text-center page-details-label"><small>Film Details</small></h4>
+    <hr>
+    <h4 class="text-center mb-3">{{filmDetails.title}}</h4>
+</div>
+
+<div class="row small">
+    <div class="col-sm-12 col-md-6 ">
+        <h6>Details:</h6>
+        <ul class="card-text list-unstyled">
+            <li class="font-weight-bold"> Director: <span class="font-weight-normal">{{filmDetails.director}}</span>
+            </li>
+            <li class="font-weight-bold"> Producer: <span class="font-weight-normal">{{filmDetails.producer}}</span>
+            </li>
+            <li class="font-weight-bold"> Date of release: <span
+                    class="font-weight-normal">{{filmDetails.release_date}}</span></li>
+        </ul>
+        <div> {{filmDetails.opening_crawl}}</div>
+    </div>
+    <div class="col-sm-12 col-md-6 " (resized)="onResized($event)">
+        <img #image class="card-img-top" src='assets/images/{{entityType}}/{{entityId}}.jpg'
+            onError="this.src='assets/images/star-wars.svg'" alt="Card image">
+    </div>
+</div>
+<h6>Characters:</h6>
+<ng-container *ngFor="let char of filmDetails.characters">
+    <app-entity-redirect [url]="char" [urlToRedirect]="'characters/details/'"></app-entity-redirect>
+</ng-container>
+<h6>Planets:</h6>
+<ng-container *ngFor="let char of filmDetails.planets">
+    <app-entity-redirect [url]="char" [urlToRedirect]="'planets/details/'"></app-entity-redirect>
+</ng-container>
+<h6>Spaceships:</h6>
+<ng-container *ngFor="let char of filmDetails.starships">
+    <app-entity-redirect [url]="char"></app-entity-redirect>
+</ng-container>
+<h6>Vehicles:</h6>
+<ng-container *ngFor="let char of filmDetails.vehicles">
+    <app-entity-redirect [url]="char"></app-entity-redirect>
+</ng-container>

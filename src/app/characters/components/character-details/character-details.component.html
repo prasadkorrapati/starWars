@@ -1,0 +1,54 @@
+<div class="page-header">
+    <h4 class="text-center page-details-label"><small>Character Details</small></h4>
+    <hr>
+    <h4 class="text-center mb-3">{{characterDetails.name}}</h4>
+</div>
+<div class="row small">
+    <div class="col-sm-6">
+        <h6>Details:</h6>
+        <ul class="card-text list-unstyled">
+            <li>
+                <strong>Height: </strong>
+                <span>{{characterDetails.height}}</span>
+            </li>
+            <li>
+                <strong>Weight: </strong>
+                <span>{{characterDetails.mass}}</span>
+            </li>
+            <li>
+                <strong>Hair Color: </strong>
+                <span>{{characterDetails.hair_color}}</span>
+            </li>
+            <li>
+                <strong>Eye Color: </strong>
+                <span>{{characterDetails.eye_color}}</span>
+            </li>
+            <li>
+                <strong>Year of Birth: </strong>
+                <span>{{characterDetails.birth_year}}</span>
+            </li>
+            <li>
+                <strong>Gender: </strong>
+                <span>{{characterDetails.gender}}</span>
+            </li>
+            <br>
+            <li class="font-weight-bold"> Home Planets: <app-entity-redirect [url]="characterDetails.homeworld">
+                </app-entity-redirect>
+            </li>
+        </ul>
+    </div>
+    <div class="col-sm-6">
+        <img #image class="card-img-top" src="assets/images/{{entityType}}/{{entityId}}.jpg " alt="Card image"
+            onError="this.src='assets/images/star-wars.svg'">
+    </div>
+</div>
+<h6>Films:</h6>
+<ng-container *ngFor="let char of characterDetails.films">
+    <app-entity-redirect [url]="char" [urlToRedirect]="'films/details/'"></app-entity-redirect>
+</ng-container>
+
+<h6>Vehicles:</h6>
+<span class="text-muted" *ngIf="!characterDetails.vehicles.length">No Vehicles for {{characterDetails.name}}.</span>
+<ng-container *ngFor="let char of characterDetails.vehicles">
+    <app-entity-redirect [url]="char"></app-entity-redirect>
+</ng-container>

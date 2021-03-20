@@ -1,0 +1,18 @@
+<h4 class="text-center">Planets</h4>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4 mt-4" *ngFor="let planet of planets">
+            <app-entity-card  [title]="planet.name" [entityType]="entityType" [entity]="planet" [route]="'/planets/details'">
+                <ng-container 
+                    [ngTemplateOutlet] = "planetCard"
+                     [ngTemplateOutletContext]="{$implicit: planet}"></ng-container>
+                <ng-template #planetCard>
+                    <ul class="card-text list-unstyled">
+                        <li> Terriain: <span>{{planet.terrain}}</span></li>
+                        <li> Gravity: <span>{{planet.gravity}}</span></li>
+                    </ul>
+                </ng-template>
+            </app-entity-card>
+        </div>
+    </div>
+</div>

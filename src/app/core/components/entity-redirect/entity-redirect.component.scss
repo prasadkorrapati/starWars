@@ -1,0 +1,8 @@
+a {
+    margin-left: 5px;
+    margin-top: 5px;
+    background-color: #eee;
+    &.disabled {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,21 @@
+<div class="page-header">
+    <h4>Films</h4>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4 mt-4" *ngFor="let film of films">
+            <app-entity-card [title]="film.title" [entityType]="entityType" [entity]="film" [route]="'/films/details'">
+                <ng-container 
+                    [ngTemplateOutlet] = "filmCard"
+                     [ngTemplateOutletContext]="{$implicit: film}"></ng-container>
+                <ng-template #filmCard>
+                    <ul class="card-text list-unstyled">
+                        <li> Director: <span>{{film.director}}</span></li>
+                        <li> Producer: <span>{{film.producer}}</span></li>
+                        <li> Date of release: <span>{{film.release_date}}</span></li>
+                    </ul>
+                </ng-template>
+            </app-entity-card>
+        </div>
+    </div>
+</div>
