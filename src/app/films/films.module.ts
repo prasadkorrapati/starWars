@@ -8,13 +8,14 @@ import { FilmDetailsComponent } from './components/film-details/film-details.com
 import { AngularResizedEventModule } from 'angular-resize-event';
 
 const filmsRoutes: Routes = [
-  { path: '', component: FilmsComponent},
-  { path: 'details/:id',
-  component: FilmDetailsComponent,
-  resolve: {
-    filmDetails: FilmDetailsResolver
+  { path: '', component: FilmsComponent },
+  {
+    path: 'details/:id',
+    component: FilmDetailsComponent,
+    resolve: {
+      filmDetails: FilmDetailsResolver
+    }
   }
-}
 
 ];
 
