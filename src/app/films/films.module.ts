@@ -5,7 +5,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { CoreModule } from '../core/core.module';
 import { FilmDetailsResolver } from './resolvers/film-details.resolver';
 import { FilmDetailsComponent } from './components/film-details/film-details.component';
-import { AngularResizedEventModule } from 'angular-resize-event';
 
 const filmsRoutes: Routes = [
   { path: '', component: FilmsComponent },
@@ -24,8 +23,7 @@ const filmsRoutes: Routes = [
   imports: [
     CoreModule,
     CommonModule,
-    RouterModule.forChild(filmsRoutes),
-    AngularResizedEventModule
+    RouterModule.forChild(filmsRoutes)
   ]
 })
 export class FilmsModule { }

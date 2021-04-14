@@ -12,12 +12,14 @@ export class CharacterDetailsComponent implements OnInit {
   characterDetails: any;
   public entityType = Entity.Character;
   public entityId: string;
+  public imgUrl:string = '';
   constructor(private activatedRoute: ActivatedRoute) { 
     this.characterDetails = this.activatedRoute.snapshot.data['characterDetails'];
   }
 
   ngOnInit(): void {
     this.entityId = this.activatedRoute.snapshot.paramMap.get('id');
+    this.imgUrl = `assets/images/${this.entityType}/${this.entityId}.jpg`;
   }
 
 }

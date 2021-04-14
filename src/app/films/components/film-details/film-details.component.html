@@ -17,9 +17,8 @@
         </ul>
         <div> {{filmDetails.opening_crawl}}</div>
     </div>
-    <div class="col-sm-12 col-md-6 " (resized)="onResized($event)">
-        <img #image class="card-img-top" src='assets/images/{{entityType}}/{{entityId}}.jpg'
-            onError="this.src='assets/images/star-wars.svg'" alt="Card image">
+    <div class="col-sm-12 col-md-6 ">
+        <app-entity-image [imgUrl]= "imgUrl"></app-entity-image>
     </div>
 </div>
 <h6>Characters:</h6>

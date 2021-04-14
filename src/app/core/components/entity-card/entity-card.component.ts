@@ -1,5 +1,4 @@
-import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
-import { ResizedEvent } from 'angular-resize-event';
+import { Component, Input, OnInit } from '@angular/core';
 import { Character, Film, Planet } from '../../types';
 
 @Component({
@@ -8,8 +7,6 @@ import { Character, Film, Planet } from '../../types';
   styleUrls: ['./entity-card.component.scss']
 })
 export class EntityCardComponent implements OnInit {
-
-  @ViewChild('image') imageElement: ElementRef | undefined;
   @Input() title ?: string;
   @Input() entity ?: Character | Film | Planet;
   @Input() entityType ?: String;
@@ -23,12 +20,6 @@ export class EntityCardComponent implements OnInit {
       return entity.url.replace(/\D/g, '')
     } else {
       return null;
-    }
-  }
-
-  onResized(event: ResizedEvent) {
-    if(this.imageElement) {
-      this.imageElement.nativeElement.height = this.imageElement.nativeElement.width;
     }
   }
 

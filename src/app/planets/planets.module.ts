@@ -5,7 +5,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { CoreModule } from '../core/core.module';
 import { PlanetDetailsComponent } from './components/planet-details/planet-details.component';
 import { PlanetDetailsResolver } from './resolvers/planet-details.resolver';
-import { AngularResizedEventModule } from 'angular-resize-event';
 
 const planetRoutes: Routes = [
   { path: '', component:  PlanetsComponent},
@@ -22,8 +21,7 @@ const planetRoutes: Routes = [
   imports: [
     CommonModule,
     CoreModule,
-    RouterModule.forChild(planetRoutes),
-    AngularResizedEventModule
+    RouterModule.forChild(planetRoutes)
   ]
 })
 export class PlanetsModule { }

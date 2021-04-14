@@ -30,9 +30,8 @@
         </ul>
         
     </div>
-    <div class="col-sm-6"  (resized)="onResized($event)">
-        <img #image class="card-img-top" src='assets/images/{{entityType}}/{{entityId}}.jpg' alt="Card image"
-            onError="this.src='assets/images/star-wars.svg'">
+    <div class="col-sm-6"  >
+        <app-entity-image [imgUrl]= "imgUrl"></app-entity-image>
     </div>
 </div>
 <div class="categories">

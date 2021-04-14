@@ -3,23 +3,28 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { EntityCardComponent } from './components/entity-card/entity-card.component';
 import { EntityRedirectComponent } from './components/entity-redirect/entity-redirect.component';
-import { AngularResizedEventModule } from 'angular-resize-event';
 import { StarWarComponent } from './components/star-war/star-war.component';
+import { SwapiService } from './services/swapi.service';
+import { EntityImageComponent } from './components/entity-image/entity-image.component';
 
 @NgModule({
   declarations: [
     EntityCardComponent,
     EntityRedirectComponent,
-    StarWarComponent
+    StarWarComponent,
+    EntityImageComponent
   ],
   imports: [
     RouterModule,
-    CommonModule,
-    AngularResizedEventModule
+    CommonModule
   ],
   exports: [
     EntityCardComponent,
-    EntityRedirectComponent
+    EntityRedirectComponent,
+    EntityImageComponent
+  ],
+  providers: [
+    SwapiService
   ]
 })
 export class CoreModule { }
