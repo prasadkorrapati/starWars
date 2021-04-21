@@ -4,7 +4,7 @@ import {
   RouterStateSnapshot,
   ActivatedRouteSnapshot
 } from '@angular/router';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 import { SwapiService } from 'src/app/core/services/swapi.service';
 import { Film } from 'src/app/core/types';
 

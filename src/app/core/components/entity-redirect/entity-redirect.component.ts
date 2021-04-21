@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, Input, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 
@@ -8,7 +8,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './entity-redirect.component.html',
   styleUrls: ['./entity-redirect.component.scss']
 })
-export class EntityRedirectComponent implements OnInit , OnDestroy {
+export class EntityRedirectComponent implements OnInit , OnDestroy, OnChanges {
 
   @Input() url ?: string ;
   @Input() urlToRedirect ?: string;
@@ -16,11 +16,10 @@ export class EntityRedirectComponent implements OnInit , OnDestroy {
   public subscription : Subscription;
   constructor(public http: HttpClient, private router: Router) {}
   ngOnChanges(changes: SimpleChanges): void {
-    if(this.url) {
+    if(changes.url) {
       this.subscription = this.http.get(this.url).subscribe((res: any) => {
         this.details = res;
       });
-
     }
   }
   

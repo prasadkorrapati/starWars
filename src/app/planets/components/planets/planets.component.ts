@@ -16,8 +16,9 @@ export class PlanetsComponent implements OnInit, OnDestroy {
   public entityType: String = Entity.Planet;
   public subscription : Subscription;
   ngOnInit(): void {
-    this.subscription = this.swapiService.getStarWars('planets').subscribe(res => this.planets = res.results);
+    this.subscription = this.swapiService.getStarWars('planets').subscribe( (res) => this.planets = res.results);
   }
+
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }

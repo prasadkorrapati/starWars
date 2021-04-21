@@ -1,0 +1,132 @@
+{
+    "count": 6,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "title": "Return of the Jedi",
+            "episode_id": 6,
+            "opening_crawl": "Luke Skywalker has returned to\r\nhis home planet of Tatooine in\r\nan attempt to rescue his\r\nfriend Han Solo from the\r\nclutches of the vile gangster\r\nJabba the Hutt.\r\n\r\nLittle does Luke know that the\r\nGALACTIC EMPIRE has secretly\r\nbegun construction on a new\r\narmored space station even\r\nmore powerful than the first\r\ndreaded Death Star.\r\n\r\nWhen completed, this ultimate\r\nweapon will spell certain doom\r\nfor the small band of rebels\r\nstruggling to restore freedom\r\nto the galaxy...",
+            "director": "Richard Marquand",
+            "producer": "Howard G. Kazanjian, George Lucas, Rick McCallum",
+            "release_date": "1983-05-25",
+            "characters": [
+                "http://swapi.dev/api/people/1/",
+                "http://swapi.dev/api/people/2/",
+                "http://swapi.dev/api/people/45/"
+            ],
+            "planets": [
+                "http://swapi.dev/api/planets/1/",
+                "http://swapi.dev/api/planets/5/"
+            ],
+            "starships": [
+                "http://swapi.dev/api/starships/2/",
+                "http://swapi.dev/api/starships/3/"
+            ],
+            "vehicles": [
+                "http://swapi.dev/api/vehicles/8/",
+                "http://swapi.dev/api/vehicles/16/"
+            ],
+            "species": [
+                "http://swapi.dev/api/species/1/",
+                "http://swapi.dev/api/species/2/"
+            ],
+            "created": "2014-12-18T10:39:33.255000Z",
+            "edited": "2014-12-20T09:48:37.462000Z",
+            "url": "http://swapi.dev/api/films/3/"
+        },
+        {
+            "title": "The Phantom Menace",
+            "episode_id": 1,
+            "opening_crawl": "Turmoil has engulfed the\r\nGalactic Republic.",
+            "director": "George Lucas",
+            "producer": "Rick McCallum",
+            "release_date": "1999-05-19",
+            "characters": [
+                "http://swapi.dev/api/people/2/"
+            ],
+            "planets": [
+                "http://swapi.dev/api/planets/1/",
+                "http://swapi.dev/api/planets/8/",
+                "http://swapi.dev/api/planets/9/"
+            ],
+            "starships": [
+                "http://swapi.dev/api/starships/31/"
+            ],
+            "vehicles": [
+                "http://swapi.dev/api/vehicles/33/",
+                "http://swapi.dev/api/vehicles/34/"
+            ],
+            "species": [
+                "http://swapi.dev/api/species/1/",
+                "http://swapi.dev/api/species/2/"
+            ],
+            "created": "2014-12-19T16:52:55.740000Z",
+            "edited": "2014-12-20T10:54:07.216000Z",
+            "url": "http://swapi.dev/api/films/4/"
+        },
+        {
+            "title": "Attack of the Clones",
+            "episode_id": 2,
+            "opening_crawl": "There is unrest in the Galactic",
+            "director": "George Lucas",
+            "producer": "Rick McCallum",
+            "release_date": "2002-05-16",
+            "characters": [
+                "http://swapi.dev/api/people/2/",
+                "http://swapi.dev/api/people/3/",
+                "http://swapi.dev/api/people/6/"
+            ],
+            "planets": [
+                "http://swapi.dev/api/planets/1/",
+                "http://swapi.dev/api/planets/8/"
+            ],
+            "starships": [
+                "http://swapi.dev/api/starships/21/"
+            ],
+            "vehicles": [
+                "http://swapi.dev/api/vehicles/4/",
+                "http://swapi.dev/api/vehicles/44/"
+            ],
+            "species": [
+                "http://swapi.dev/api/species/1/",
+                "http://swapi.dev/api/species/2/"
+            ],
+            "created": "2014-12-20T10:57:57.886000Z",
+            "edited": "2014-12-20T20:18:48.516000Z",
+            "url": "http://swapi.dev/api/films/5/"
+        },
+        {
+            "title": "Revenge of the Sith",
+            "episode_id": 3,
+            "opening_crawl": "War! The Republic is crumbling",
+            "director": "George Lucas",
+            "producer": "Rick McCallum",
+            "release_date": "2005-05-19",
+            "characters": [
+                "http://swapi.dev/api/people/1/",
+                "http://swapi.dev/api/people/2/"
+            ],
+            "planets": [
+                "http://swapi.dev/api/planets/1/",
+                "http://swapi.dev/api/planets/2/"
+            ],
+            "starships": [
+                "http://swapi.dev/api/starships/2/",
+                "http://swapi.dev/api/starships/32/"
+            ],
+            "vehicles": [
+                "http://swapi.dev/api/vehicles/33/",
+                "http://swapi.dev/api/vehicles/50/"
+            ],
+            "species": [
+                "http://swapi.dev/api/species/1/",
+                "http://swapi.dev/api/species/36/",
+                "http://swapi.dev/api/species/37/"
+            ],
+            "created": "2014-12-20T18:49:38.403000Z",
+            "edited": "2014-12-20T20:47:52.073000Z",
+            "url": "http://swapi.dev/api/films/6/"
+        }
+    ]
+}

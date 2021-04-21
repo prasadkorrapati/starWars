@@ -1,6 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Entity } from 'src/app/core/entity';
+import { Film } from 'src/app/core/types';
 
 @Component({
   selector: 'app-film-details',
@@ -9,7 +10,7 @@ import { Entity } from 'src/app/core/entity';
 })
 export class FilmDetailsComponent implements OnInit {
 
-  public filmDetails: any;
+  public filmDetails: Film;
   public entityType = Entity.Film;
   public entityId: string;
   public imgUrl:string;
